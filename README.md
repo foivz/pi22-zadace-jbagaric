@@ -15,5 +15,6 @@ U štićenim objektima poput zatvora i kaznionica javlja se problem nedozvoljeno
 Zahtjevi za funkcionalnošću ovog programskog proizvoda su trenutno lociranje dozvoljenih i nedozvoljenih uređaja, uvid u povijest uređaja koji su se pojavljivali i njohvo simulirano kretanje, ograničenje pristupa podacima, obavještavanje o pojavi novog uređaja mailom ili sms porukom, mogućnost dizajniranja štićenog objekta te njegov opis
 
 ## Zadatak
-link: https://elf.foi.hr/mod/resource/view.php?id=88396
+link zadatka na moodlu: https://elf.foi.hr/mod/resource/view.php?id=88396
+link zadatka na wiki: https://github.com/foivz/pi22-zadace-jbagaric.wiki.git
 
