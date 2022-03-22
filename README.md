@@ -16,5 +16,6 @@ Zahtjevi za funkcionalnošću ovog programskog proizvoda su trenutno lociranje d
 
 ## Zadatak
 link zadatka na moodlu: https://elf.foi.hr/mod/resource/view.php?id=88396
+
 link zadatka na wiki: https://github.com/foivz/pi22-zadace-jbagaric.wiki.git
 
