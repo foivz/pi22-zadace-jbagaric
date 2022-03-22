@@ -17,6 +17,3 @@ Umjesto ovih uputa vlastitim riječima opišite zahtjeve za funkcionalnošću pr
 ## Zadatak
 link: 
 
-## Resursi
-Github Markdown sintaksa dostupna je na [ovom linku](https://guides.github.com/features/mastering-markdown/) ali i na Moodleu u sekciji Zadaće.
-Zadaće je obvezno predati u obliku Wiki stranica na ovom repozitoriju. Slike i druge artefakte koje ćete trabati na wiki stranicama smjestite u mapu dokumentacije u repozitoriju. 
