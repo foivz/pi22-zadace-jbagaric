@@ -45,9 +45,10 @@ namespace Signal_Localization.Repositories
                 Id = id,
                 Kat = kat,
                 Vrsta = vrsta,
-               // BrojKreveta = brojKreveta,
+                //BrojKreveta = brojKreveta,
                 Velicina = velicina
             };
+            
 
             return prostorija;
         }
