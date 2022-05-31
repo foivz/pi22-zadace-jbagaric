@@ -17,6 +17,9 @@ namespace Signal_Localization.Repositories
             Zatvorenik zatvorenik = null;
 
             string sql = $"SELECT * FROM Zatvorenici WHERE idZatvorenika = {id}";
+
+           // DB.SetConfiguration("jbagaric20_DB", "jbagaric20", "#A{v+t8H");
+
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             if (reader.HasRows)
@@ -35,6 +38,7 @@ namespace Signal_Localization.Repositories
              var zatvorenici = new BindingList<Zatvorenik>();
 
             string sql = "SELECT * FROM Zatvorenici";
+            //DB.SetConfiguration("jbagaric20_DB", "jbagaric20", "#A{v+t8H");
             DB.OpenConnection();
             SqlDataReader reader = DB.GetDataReader(sql);
             while (reader.Read())

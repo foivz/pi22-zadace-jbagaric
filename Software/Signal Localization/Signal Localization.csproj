@@ -58,10 +58,12 @@
       <DependentUpon>jbagaric20_DBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Models\Osoba.cs" />
+    <Compile Include="Models\Prostorija.cs" />
     <Compile Include="Models\VoditeljObjekta.cs" />
     <Compile Include="Models\Zatvorenik.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ProstorijaRepository.cs" />
     <Compile Include="Repositories\ZatvorenikRepository.cs" />
     <EmbeddedResource Include="FrmDescriptiveData.resx">
       <DependentUpon>FrmDescriptiveData.cs</DependentUpon>
