@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Signal Localization", "Signal Localization.csproj", "{A1B87A62-C295-479C-A2A8-13A517573A44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBLayer", "..\DBLayer\DBLayer.csproj", "{D8618116-AB5E-43FA-A721-039AE2A58C73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A1B87A62-C295-479C-A2A8-13A517573A44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1B87A62-C295-479C-A2A8-13A517573A44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1B87A62-C295-479C-A2A8-13A517573A44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8618116-AB5E-43FA-A721-039AE2A58C73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8618116-AB5E-43FA-A721-039AE2A58C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8618116-AB5E-43FA-A721-039AE2A58C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8618116-AB5E-43FA-A721-039AE2A58C73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
