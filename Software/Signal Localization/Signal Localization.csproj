@@ -52,6 +52,9 @@
     <Compile Include="FrmDescriptiveData.Designer.cs">
       <DependentUpon>FrmDescriptiveData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Osoba.cs" />
+    <Compile Include="Models\VoditeljObjekta.cs" />
+    <Compile Include="Models\Zatvorenik.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmDescriptiveData.resx">
