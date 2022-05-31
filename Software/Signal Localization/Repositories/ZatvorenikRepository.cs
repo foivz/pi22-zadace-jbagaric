@@ -6,8 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-
-
+using System.ComponentModel;
 
 namespace Signal_Localization.Repositories
 {
@@ -31,13 +30,13 @@ namespace Signal_Localization.Repositories
             return zatvorenik;
         }
 
-        public static List<Zatvorenik> GetZatvorenike()
+        public static BindingList<Zatvorenik> GetZatvorenici()
         {
-            var zatvorenici = new List<Zatvorenik>();
+             var zatvorenici = new BindingList<Zatvorenik>();
 
             string sql = "SELECT * FROM Zatvorenici";
             DB.OpenConnection();
-            var reader = DB.GetDataReader(sql);
+            SqlDataReader reader = DB.GetDataReader(sql);
             while (reader.Read())
             {
                 Zatvorenik zatvorenik= CreateObject(reader);

@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace Signal_Localization.Models
 {
-    public abstract class Osoba : Object
+    public abstract class Osoba 
     {
         public int Id { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
+
         public override string ToString()
         {
             return Ime + " " + Prezime;
         }
-
-
     }
 }

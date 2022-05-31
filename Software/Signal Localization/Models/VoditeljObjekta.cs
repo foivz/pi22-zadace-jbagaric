@@ -8,5 +8,6 @@ namespace Signal_Localization.Models
 {
     public class VoditeljObjekta : Osoba
     {
+        public string UserName { get; set; }
     }
 }
