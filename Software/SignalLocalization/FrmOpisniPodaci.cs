@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SignalLocalization.Models;
+using SignalLocalization.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,18 @@ namespace SignalLocalization
         public FrmOpisniPodaci()
         {
             InitializeComponent();
+        }
+
+        private void FrmOpisniPodaci_Load(object sender, EventArgs e)
+        {
+            ShowZatvorenike();
+        }
+
+        private void ShowZatvorenike()
+        {
+            List<Zatvorenik> zatvorenici = ZatvorenikRepository.GetZatvorenike();
+            dgvOpisniPodaci.DataSource = zatvorenici;
+
         }
     }
 }

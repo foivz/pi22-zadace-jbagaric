@@ -27,7 +27,7 @@ namespace SignalLocalization.Repositories
             return zatvorenik;
         }
 
-        public static List<Zatvorenik> GetStudents()
+        public static List<Zatvorenik> GetZatvorenike()
         {
             List<Zatvorenik> zatvorenici = new List<Zatvorenik>();
             string sql = "SELECT * FROM Zatvorenici";
