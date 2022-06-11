@@ -29,8 +29,11 @@ namespace SignalLocalization.Repositories
 
         public static List<Zatvorenik> GetZatvorenike()
         {
-            List<Zatvorenik> zatvorenici = new List<Zatvorenik>();
+            var zatvorenici = new List<Zatvorenik>();
+
             string sql = "SELECT * FROM Zatvorenici";
+            DB.SetConfiguration("jbagaric20_DB", "jbagaric20", "#A{v+t8H");
+
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             while (reader.Read())
@@ -45,10 +48,10 @@ namespace SignalLocalization.Repositories
 
         private static Zatvorenik CreateObject(SqlDataReader reader)
         {
-            int id = int.Parse(reader["idZatvorenika"].ToString());
-            string ime = reader["imeZatvorenika"].ToString();
-            string prezime = reader["prezimeZatvorenika"].ToString();
-            DateTime datumPritvora = DateTime.Parse(reader["datumPritovra"].ToString());
+            int id = int.Parse(reader["id"].ToString());
+            string ime = reader["ime"].ToString();
+            string prezime = reader["prezime"].ToString();
+            DateTime datumPritvora = DateTime.Parse(reader["datumPritvora"].ToString());
             var zatvorenik = new Zatvorenik
             {
                 Id = id,
