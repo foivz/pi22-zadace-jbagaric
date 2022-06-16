@@ -23,5 +23,17 @@ namespace SignalLocalization
             this.testProstorijaTableAdapter.Fill(this.jbagaric20_DBDataSet.TestProstorija);
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int rowIndex = dgvOpisniPodaci.CurrentCell.RowIndex;
+            dgvOpisniPodaci.Rows.RemoveAt(rowIndex);
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            FrmDodaj form2 = new FrmDodaj();
+            form2.ShowDialog();
+        }
     }
 }
