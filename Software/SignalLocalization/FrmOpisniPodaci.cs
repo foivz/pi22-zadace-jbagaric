@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SignalLocalization.Models;
 
 namespace SignalLocalization
 {
@@ -16,6 +17,8 @@ namespace SignalLocalization
         {
             InitializeComponent();
         }
+
+        
 
         private void FrmOpisniPodaci_Load(object sender, EventArgs e)
         {
@@ -34,6 +37,27 @@ namespace SignalLocalization
         {
             FrmDodaj form2 = new FrmDodaj();
             form2.ShowDialog();
+        }
+
+        private void dgvOpisniPodaci_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+                Prostorija selectedProstorija = dgvOpisniPodaci.CurrentRow.DataBoundItem as Prostorija;
+                //if (selectedProstorija != null)
+                //{
+
+                FrmDodaj frmDodaj = new FrmDodaj(selectedProstorija);
+
+                //}
+                frmDodaj.txtID.Text = this.dgvOpisniPodaci.CurrentRow.Cells[0].Value.ToString();
+                frmDodaj.txtKat.Text = this.dgvOpisniPodaci.CurrentRow.Cells[1].Value.ToString();
+                //frmDodaj.txtVrsta.Text = this.dgvOpisniPodaci.CurrentRow.Cells[2].Value.ToString();
+                frmDodaj.txtBroj.Text = this.dgvOpisniPodaci.CurrentRow.Cells[2].Value.ToString();
+                frmDodaj.txtVelicina.Text = this.dgvOpisniPodaci.CurrentRow.Cells[3].Value.ToString();
+                frmDodaj.txtKrevet.Text = this.dgvOpisniPodaci.CurrentRow.Cells[4].Value.ToString();
+                frmDodaj.txtZatvorenik.Text = dgvOpisniPodaci.CurrentRow.Cells[5].Value.ToString();
+                frmDodaj.ShowDialog();
+            
         }
     }
 }

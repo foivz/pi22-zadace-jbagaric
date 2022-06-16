@@ -64,6 +64,7 @@
             this.dgvOpisniPodaci.RowTemplate.Height = 24;
             this.dgvOpisniPodaci.Size = new System.Drawing.Size(663, 233);
             this.dgvOpisniPodaci.TabIndex = 0;
+            this.dgvOpisniPodaci.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOpisniPodaci_CellDoubleClick);
             // 
             // btnAdd
             // 

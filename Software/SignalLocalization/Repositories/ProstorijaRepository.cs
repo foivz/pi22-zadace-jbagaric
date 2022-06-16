@@ -69,5 +69,24 @@ namespace SignalLocalization.Repositories
             };
             return prostorija;
         }
+
+        public void Insert(Prostorija prostorija)
+        {
+            string sql = $"INSERT INTO TestProstorija (idTestProstorija, kat, broj, velicina, krevet, idTestZatvorenik) VALUES({ prostorija.Id},{ prostorija.Kat}, { prostorija.Broj},{ prostorija.Velicina},{ prostorija.BrojKreveta}, { prostorija.IdZatvorenika})";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
+
+        public void Update(Prostorija prostorija)
+        {
+
+            string sql = $"UPDATE Tasks " +
+                $"SET idTestProstorija = '{prostorija.Id}', kat = {prostorija.Kat}, broj = '{prostorija.Broj}', velicina = '{prostorija.Velicina}', krevet = '{prostorija.BrojKreveta}', idTestZatvorenik = '{prostorija.IdZatvorenika}'   WHERE Id={prostorija.Id}";
+
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
     }
 }
