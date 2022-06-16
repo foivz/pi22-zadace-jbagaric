@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SignalLocalization
 {
-    public partial class Form1 : Form
+    public partial class FrmOpisniPodaci : Form
     {
-        public Form1()
+        public FrmOpisniPodaci()
         {
             InitializeComponent();
         }
