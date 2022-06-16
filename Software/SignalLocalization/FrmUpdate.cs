@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SignalLocalization.Models;
+using SignalLocalization.Repositories;
 
 namespace SignalLocalization
 {
@@ -42,6 +43,27 @@ namespace SignalLocalization
             this.Visible = false;
             form.ShowDialog();
             this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Prostorija prostorijaZaAzuriranje = ProstorijaRepository.GetProstorija(_selectedProstorija.Id);
+            prostorijaZaAzuriranje.Kat = int.Parse(txtKat.Text);
+            prostorijaZaAzuriranje.Broj = int.Parse(txtBroj.Text);
+            prostorijaZaAzuriranje.Velicina = int.Parse(txtVelicina.Text);
+            prostorijaZaAzuriranje.BrojKreveta = int.Parse(txtKrevet.Text);
+            prostorijaZaAzuriranje.IdZatvorenika = int.Parse(txtZatvorenik.Text);
+
+
+
+            ProstorijaRepository repository = new ProstorijaRepository();
+            repository.Update(prostorijaZaAzuriranje);
+
+            FrmOpisniPodaci form = new FrmOpisniPodaci();
+            this.Visible = false;
+            form.ShowDialog();
+            this.Close();
+
         }
     }
 }

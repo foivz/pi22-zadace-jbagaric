@@ -68,6 +68,7 @@
             this.btnCancel.TabIndex = 25;
             this.btnCancel.Text = "Odustani";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -78,6 +79,7 @@
             this.btnSave.TabIndex = 24;
             this.btnSave.Text = "Spremi";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtKat
             // 

@@ -27,7 +27,10 @@ namespace SignalLocalization
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Close();
+            FrmOpisniPodaci form = new FrmOpisniPodaci();
+            this.Visible = false;
+            form.ShowDialog();
+            this.Close();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
