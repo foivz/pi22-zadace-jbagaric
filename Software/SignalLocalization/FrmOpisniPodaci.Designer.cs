@@ -28,15 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgvOpisniPodaci = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.jbagaric20_DBDataSet = new SignalLocalization.jbagaric20_DBDataSet();
+            this.testProstorijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.testProstorijaTableAdapter = new SignalLocalization.jbagaric20_DBDataSetTableAdapters.TestProstorijaTableAdapter();
+            this.idTestProstorijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.katDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brojDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.velicinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.krevetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idTestZatvorenikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOpisniPodaci)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jbagaric20_DBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testProstorijaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvOpisniPodaci
             // 
+            this.dgvOpisniPodaci.AutoGenerateColumns = false;
             this.dgvOpisniPodaci.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOpisniPodaci.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idTestProstorijaDataGridViewTextBoxColumn,
+            this.katDataGridViewTextBoxColumn,
+            this.brojDataGridViewTextBoxColumn,
+            this.velicinaDataGridViewTextBoxColumn,
+            this.krevetDataGridViewTextBoxColumn,
+            this.idTestZatvorenikDataGridViewTextBoxColumn});
+            this.dgvOpisniPodaci.DataSource = this.testProstorijaBindingSource;
             this.dgvOpisniPodaci.Location = new System.Drawing.Point(67, 68);
             this.dgvOpisniPodaci.Name = "dgvOpisniPodaci";
             this.dgvOpisniPodaci.RowHeadersWidth = 51;
@@ -63,6 +84,68 @@
             this.btnDelete.Text = "Obriši";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
+            // jbagaric20_DBDataSet
+            // 
+            this.jbagaric20_DBDataSet.DataSetName = "jbagaric20_DBDataSet";
+            this.jbagaric20_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // testProstorijaBindingSource
+            // 
+            this.testProstorijaBindingSource.DataMember = "TestProstorija";
+            this.testProstorijaBindingSource.DataSource = this.jbagaric20_DBDataSet;
+            // 
+            // testProstorijaTableAdapter
+            // 
+            this.testProstorijaTableAdapter.ClearBeforeFill = true;
+            // 
+            // idTestProstorijaDataGridViewTextBoxColumn
+            // 
+            this.idTestProstorijaDataGridViewTextBoxColumn.DataPropertyName = "idTestProstorija";
+            this.idTestProstorijaDataGridViewTextBoxColumn.HeaderText = "idTestProstorija";
+            this.idTestProstorijaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idTestProstorijaDataGridViewTextBoxColumn.Name = "idTestProstorijaDataGridViewTextBoxColumn";
+            this.idTestProstorijaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // katDataGridViewTextBoxColumn
+            // 
+            this.katDataGridViewTextBoxColumn.DataPropertyName = "kat";
+            this.katDataGridViewTextBoxColumn.HeaderText = "kat";
+            this.katDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.katDataGridViewTextBoxColumn.Name = "katDataGridViewTextBoxColumn";
+            this.katDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // brojDataGridViewTextBoxColumn
+            // 
+            this.brojDataGridViewTextBoxColumn.DataPropertyName = "broj";
+            this.brojDataGridViewTextBoxColumn.HeaderText = "broj";
+            this.brojDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.brojDataGridViewTextBoxColumn.Name = "brojDataGridViewTextBoxColumn";
+            this.brojDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // velicinaDataGridViewTextBoxColumn
+            // 
+            this.velicinaDataGridViewTextBoxColumn.DataPropertyName = "velicina";
+            this.velicinaDataGridViewTextBoxColumn.HeaderText = "velicina";
+            this.velicinaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.velicinaDataGridViewTextBoxColumn.Name = "velicinaDataGridViewTextBoxColumn";
+            this.velicinaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // krevetDataGridViewTextBoxColumn
+            // 
+            this.krevetDataGridViewTextBoxColumn.DataPropertyName = "krevet";
+            this.krevetDataGridViewTextBoxColumn.HeaderText = "krevet";
+            this.krevetDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.krevetDataGridViewTextBoxColumn.Name = "krevetDataGridViewTextBoxColumn";
+            this.krevetDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // idTestZatvorenikDataGridViewTextBoxColumn
+            // 
+            this.idTestZatvorenikDataGridViewTextBoxColumn.DataPropertyName = "idTestZatvorenik";
+            this.idTestZatvorenikDataGridViewTextBoxColumn.HeaderText = "idTestZatvorenik";
+            this.idTestZatvorenikDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idTestZatvorenikDataGridViewTextBoxColumn.Name = "idTestZatvorenikDataGridViewTextBoxColumn";
+            this.idTestZatvorenikDataGridViewTextBoxColumn.Width = 125;
+            // 
             // FrmOpisniPodaci
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -73,7 +156,10 @@
             this.Controls.Add(this.dgvOpisniPodaci);
             this.Name = "FrmOpisniPodaci";
             this.Text = "FrmOpisniPodaci";
+            this.Load += new System.EventHandler(this.FrmOpisniPodaci_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOpisniPodaci)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jbagaric20_DBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testProstorijaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -83,6 +169,15 @@
         private System.Windows.Forms.DataGridView dgvOpisniPodaci;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
+        private jbagaric20_DBDataSet jbagaric20_DBDataSet;
+        private System.Windows.Forms.BindingSource testProstorijaBindingSource;
+        private jbagaric20_DBDataSetTableAdapters.TestProstorijaTableAdapter testProstorijaTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idTestProstorijaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn katDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brojDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn velicinaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn krevetDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idTestZatvorenikDataGridViewTextBoxColumn;
     }
 }
 

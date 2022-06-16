@@ -52,6 +52,11 @@
     <Compile Include="FrmOpisniPodaci.Designer.cs">
       <DependentUpon>FrmOpisniPodaci.cs</DependentUpon>
     </Compile>
+    <Compile Include="jbagaric20_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>jbagaric20_DBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Models\Osoba.cs" />
     <Compile Include="Models\Prostorija.cs" />
     <Compile Include="Models\Zatvorenik.cs" />
@@ -71,6 +76,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="jbagaric20_DBDataSet.xsc">
+      <DependentUpon>jbagaric20_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="jbagaric20_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>jbagaric20_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="jbagaric20_DBDataSet.xss">
+      <DependentUpon>jbagaric20_DBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
