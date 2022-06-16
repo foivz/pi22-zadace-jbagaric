@@ -52,6 +52,9 @@
     <Compile Include="FrmOpisniPodaci.Designer.cs">
       <DependentUpon>FrmOpisniPodaci.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Osoba.cs" />
+    <Compile Include="Models\Prostorija.cs" />
+    <Compile Include="Models\Zatvorenik.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmOpisniPodaci.resx">
