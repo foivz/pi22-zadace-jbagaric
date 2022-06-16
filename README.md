@@ -17,5 +17,6 @@ Zahtjevi za funkcionalnošću ovog programskog proizvoda su trenutno lociranje d
 ## Zadatak
 link zadatka na moodlu: https://elf.foi.hr/mod/resource/view.php?id=88396
 
-
+## Izvještaj
+Implementacija funkcionalnosti ne slijedi u velikoj mjeri prethodno napravljene dijagrame. To ne mora značiti da su krivi nego možda previše komplicirani meni da bi implementirala sve kao na njima. Sa dijagrama klasa implementirane su klase: Osoba, Zatvorenik, Prostorija, ProstorijaRepository i ZatvorenikRepository. Nije potrebno izabrati poseban kat i posebnu sobu kako bi se unijeli podaci kao što je prikazano na dijagramu aktivnosti i dijagramu slijeda. U rješenju nisam uspjela napraviti sve kako sam zamislila, ali barem CRUD radi.
 
