@@ -57,6 +57,8 @@
     <Compile Include="Models\Zatvorenik.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ProstorijaRepository.cs" />
+    <Compile Include="Repositories\ZatvorenikRepository.cs" />
     <EmbeddedResource Include="FrmOpisniPodaci.resx">
       <DependentUpon>FrmOpisniPodaci.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,6 +83,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBLayer\DBLayer.csproj">
+      <Project>{1923b461-1ea1-46ac-a527-38230d898890}</Project>
+      <Name>DBLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
