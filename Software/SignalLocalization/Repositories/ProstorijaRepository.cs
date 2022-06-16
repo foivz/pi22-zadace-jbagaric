@@ -56,18 +56,15 @@ namespace SignalLocalization.Repositories
             int krevet = int.Parse(reader["krevet"].ToString());
             int id2 = int.Parse(reader["idTestZatvorenik"].ToString());
 
-            var prostorija = new Prostorija
-            {
-                Id = id,
-                Kat = kat,
-                // Vrsta = vrsta,
-                Broj = broj,
-                Velicina = velicina,
-                BrojKreveta = krevet,
-
-                IdZatvorenika = id2
-            };
+            Prostorija prostorija = new Prostorija();
+            prostorija.Id = id;
+            prostorija.Kat = kat;
+            prostorija.Broj = broj;
+            prostorija.Velicina = velicina;
+            prostorija.BrojKreveta = krevet;
+            prostorija.IdZatvorenika = id2;
             return prostorija;
+            
         }
 
         public void Insert(Prostorija prostorija)

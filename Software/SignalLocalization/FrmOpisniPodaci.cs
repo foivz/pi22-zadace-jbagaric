@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SignalLocalization.Models;
+using SignalLocalization.Repositories;
 
 namespace SignalLocalization
 {
@@ -22,42 +23,46 @@ namespace SignalLocalization
 
         private void FrmOpisniPodaci_Load(object sender, EventArgs e)
         {
+            this.OsvjeziPrikaz();
             // TODO: This line of code loads data into the 'jbagaric20_DBDataSet.TestProstorija' table. You can move, or remove it, as needed.
-            this.testProstorijaTableAdapter.Fill(this.jbagaric20_DBDataSet.TestProstorija);
+            //this.testProstorijaTableAdapter.Fill(this.jbagaric20_DBDataSet.TestProstorija);
 
+        }
+
+        private void OsvjeziPrikaz()
+        {
+            List<Prostorija> prostorije = ProstorijaRepository.GetProstorije();
+            dgvOpisniPodaci.DataSource = prostorije;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int rowIndex = dgvOpisniPodaci.CurrentCell.RowIndex;
-            dgvOpisniPodaci.Rows.RemoveAt(rowIndex);
+            Prostorija selectedProstorija = dgvOpisniPodaci.CurrentRow.DataBoundItem as Prostorija;
+            ProstorijaRepository repository = new ProstorijaRepository();
+            repository.Delete(selectedProstorija.Id);
+            this.OsvjeziPrikaz();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FrmDodaj form2 = new FrmDodaj();
             form2.ShowDialog();
+            this.Close();
         }
 
         private void dgvOpisniPodaci_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-                Prostorija selectedProstorija = dgvOpisniPodaci.CurrentRow.DataBoundItem as Prostorija;
-                //if (selectedProstorija != null)
-                //{
 
-                FrmDodaj frmDodaj = new FrmDodaj(selectedProstorija);
-
-                //}
-                frmDodaj.txtID.Text = this.dgvOpisniPodaci.CurrentRow.Cells[0].Value.ToString();
-                frmDodaj.txtKat.Text = this.dgvOpisniPodaci.CurrentRow.Cells[1].Value.ToString();
-                //frmDodaj.txtVrsta.Text = this.dgvOpisniPodaci.CurrentRow.Cells[2].Value.ToString();
-                frmDodaj.txtBroj.Text = this.dgvOpisniPodaci.CurrentRow.Cells[2].Value.ToString();
-                frmDodaj.txtVelicina.Text = this.dgvOpisniPodaci.CurrentRow.Cells[3].Value.ToString();
-                frmDodaj.txtKrevet.Text = this.dgvOpisniPodaci.CurrentRow.Cells[4].Value.ToString();
-                frmDodaj.txtZatvorenik.Text = dgvOpisniPodaci.CurrentRow.Cells[5].Value.ToString();
-                frmDodaj.ShowDialog();
+            Prostorija selectedProstorija = dgvOpisniPodaci.CurrentRow.DataBoundItem as Prostorija;
             
+            this.Hide();
+
+            FrmUpdate frmUpdate = new FrmUpdate(selectedProstorija);
+            frmUpdate.ShowDialog();
+
+            this.Close();
+
         }
     }
 }
